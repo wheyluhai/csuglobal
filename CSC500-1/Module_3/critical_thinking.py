@@ -1,10 +1,3 @@
-#Part 2:
-#Many people keep time using a 24-hour clock (11 is 11am and 23 is 11pm, 0 is midnight). If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm). Write a Python program to solve the general version of the above problem. Ask the user for the time now (in hours) and then ask for the number of hours to wait for the alarm. Your program should output what the time will be on a 24-hour clock when the alarm goes off.
-#
-#Submission:
-#Compile and submit your pseudocode, source code, and screenshots of the application executing the code from Parts 1 and 2, the results and GIT repository in a single document (Word is preferred).
-
-# get meal total from user
 print("###########################################################################")
 print("#                                                                         #")
 print("# Part 1:                                                                 #")
@@ -34,7 +27,9 @@ def get_cost():
 
     return cost
 
+# get meal total from user
 meal_cost_dollars = get_cost()
+
 print("\nYou entered:  $%0.2f" % meal_cost_dollars)
 
 # solution per written instruction "then calculate the amounts with an 18 percent tip and 7 percent sales tax."
@@ -105,12 +100,16 @@ def get_hours_to_wait():
 
     return hours_to_wait
 
-
+# get user input for current time
 time_now      = get_time()
+
+# get user input for hours to wait before alarm
 hours_to_wait = get_hours_to_wait()
 
+# calculate alarm time
 time_alarm    = (time_now + hours_to_wait) % 24
 
+# format time
 def format_time(time):
     if time < 10:
         return "0" + str(time)
@@ -120,6 +119,8 @@ def format_time(time):
 time_now_display   = format_time(time_now)
 time_alarm_display = format_time(time_alarm)
 
-print("The current time is %s00." % time_now_display)
+# output current time and alarm time
+print("The current time is %s00 hours." % time_now_display)
 print("Alarm will go off in %s hour(s)." % hours_to_wait)
-print("Alarm will go off at %s00." % time_alarm_display)
+print("Alarm will go off at %s00 hours." % time_alarm_display)
+
