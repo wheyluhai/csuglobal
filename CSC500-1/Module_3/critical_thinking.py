@@ -120,7 +120,7 @@ time_now_display   = format_time(time_now)
 time_alarm_display = format_time(time_alarm)
 
 # output current time and alarm time
-print("The current time is %s00 hours." % time_now_display)
+print("\nThe current time is %s00 hours." % time_now_display)
 print("Alarm will go off in %s hour(s)." % hours_to_wait)
 print("Alarm will go off at %s00 hours." % time_alarm_display)
 
